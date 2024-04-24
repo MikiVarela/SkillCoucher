@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{/fragment.html::cabecera}"></head>
+  <body>
+    <nav th:replace="~{/fragment.html::mainMenu}"></nav>
+    <h1>Editar usuario</h1>
+    <form
+      method="post"
+      action="#"
+      th:action="@{/user/edit/submit}"
+      th:object="${usuarioForm}"
+    >
+      <!-- <input type="text" id="id" th:field="*{id}" hidden /><br /> -->
+      Nombre:<input type="text" th:field="*{nombre}" readonly /><br />
+      <label>Contraseña:<input type="password" th:field="*{password}" /></label
+      ><br />
+      <div sec:authorize="hasRole('ADMIN')" class="nav-item">
+        Rol:<select th:field="*{rol}" th:href="@{/usuarios/}">
+          <option value="USUARIO">Usuario</option>
+          <option value="MANAGER">Manager</option>
+          <option value="ADMIN">Admin</option></select
+        ><br />
+      </div>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

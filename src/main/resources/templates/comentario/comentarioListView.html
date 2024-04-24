@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{/fragment.html::cabecera}"></head>
+  <body>
+    <nav th:replace="~{/fragment.html::mainMenu}"></nav>
+    <h1>Lista valoraciones</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Puntuacion</th>
+          <th>Descripción</th>
+          <th>Usuario</th>
+          <th>Arma</th>
+          <th>Borrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="comentario : ${listaComentario}">
+          <td th:text="${comentario.id}">Id</td>
+          <td th:text="${comentario.puntuacion}">Puntuacion</td>
+          <td th:text="${comentario.descripcion}">Comentario</td>
+          <td th:text="${comentario.usuario.nombre}">Usuario</td>
+          <td th:text="${comentario.arma.nombre}">Arma</td>
+          <td>
+            <a th:href="@{/com/delete/{id}(id=${comentario.id})}">Borrar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a th:href="@{/com/new}">Crear nuevo comentario</a><br />
+    <p th:text="${txterror}">*</p>
+  </body>
+</html>

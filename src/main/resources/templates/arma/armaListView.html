@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="~{/fragment.html::cabecera}"></head>
+
+  <body>
+    <nav th:replace="~{/fragment.html::mainMenu}"></nav>
+    <h1>Productos</h1>
+    <select id="select" onChange="changeCategory();">
+      <option value="0">Todas</option>
+      <option
+        th:each="cat : ${listaCategorias}"
+        th:value="${cat.id}"
+        th:text="${cat.nombre}"
+        th:selected="${cat.id} == ${categoriaSeleccionada.id} ? true : false"
+      ></option>
+    </select>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Escalado</th>
+          <th>Comentario</th>
+          <th>Editar</th>
+          <th>Borrar</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr th:each="arma : ${listaArmas}">
+          <td th:text="${arma.id}">Id</td>
+          <td th:text="${arma.nombre}">Nombre</td>
+          <td th:text="${arma.escalado}">Escalado</td>
+          <td>
+            <a th:href="@{/com/arma/{id}(id=${arma.id})}">Comentario</a>
+          </td>
+          <td>
+            <a th:href="@{/armas/edit/{id}(id=${arma.id})}">Editar</a>
+          </td>
+          <td>
+            <a th:href="@{/armas/delete/{id}(id=${arma.id})}">Borrar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a th:href="@{/armas/new}">Nueva arma</a><br />
+    <img src="/images/producto.jpg" width="10%" />
+  </body>
+</html>
