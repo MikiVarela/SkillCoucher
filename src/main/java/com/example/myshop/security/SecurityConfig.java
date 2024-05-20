@@ -36,7 +36,7 @@ public class SecurityConfig {
                 http.headers(headersConfigurer -> headersConfigurer
                                 .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
                 http.authorizeHttpRequests(auth -> auth
-                                .requestMatchers("/public/**", "/armas", "/categorias", "/user/new/**")
+                                .requestMatchers("/public/**","js/**", "/elden", "/categorias", "/user/new/**")
                                 // "user/new/submit"
                                 // ,"/signin","/signout"
                                 .permitAll() // configurarpermisosreales

@@ -17,7 +17,7 @@ import com.example.myshop.services.ArmaService;
 import com.example.myshop.services.CategoriaService;
 
 @Controller
-@RequestMapping("/armas")
+@RequestMapping("/elden")
 public class ArmaController {
 
     @Autowired
@@ -30,7 +30,7 @@ public class ArmaController {
         model.addAttribute("listaArmas", armaService.obtenerTodos());
         model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
         model.addAttribute("categoriaSeleccionada", new Categoria(0L, "Todas"));
-        return "arma/armaListView";
+        return "elden/eldenList";
     }
 
     @GetMapping("/new")
