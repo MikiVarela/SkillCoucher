@@ -75,7 +75,6 @@
 .element {
   background: green;
   width: 300px;
-  -webkit-transform-origin: 50% 50%;
   height: inherit;
   margin: 0 7px 0 0;
   display: inline-block;

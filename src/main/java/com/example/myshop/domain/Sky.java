@@ -1,13 +1,10 @@
 package com.example.myshop.domain;
-
-import java.time.LocalDate;
-
-import com.example.myshop.domain.enumerales.Rol;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotEmpty;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,13 +15,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Entity
-public class Usuario {
+public class Sky {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(unique = true) // evita duplicados a nivel base de datos
+    @NotEmpty
     private String nombre;
-    private String password;
-    private Rol rol;
-    private LocalDate fecha = LocalDate.now();
+    private String escalado;
+
+    @ManyToOne
+    private Categoria categoria;    
 }

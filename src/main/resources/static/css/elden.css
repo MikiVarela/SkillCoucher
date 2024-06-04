@@ -1,8 +1,9 @@
 body {
   background-color: gray;
   background-image: url("https://www.gameit.es/wp-content/uploads/2021/12/elden-ring.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  background-attachment: fixed;
+  background-position: center; 
 }
 
 .card {
@@ -195,7 +196,7 @@ main {
 
 header img {
   display: flex;
-  width: 10%;
+  width: 5%;
   margin: 0px;
 }
 

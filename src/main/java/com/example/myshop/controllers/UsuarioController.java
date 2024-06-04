@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.myshop.domain.Rol;
 import com.example.myshop.domain.Usuario;
+import com.example.myshop.domain.enumerales.Rol;
 import com.example.myshop.services.UsuarioService;
 
 import jakarta.validation.Valid;

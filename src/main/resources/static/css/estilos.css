@@ -1,6 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url("https://www.101tv.es/wp-content/uploads/2023/06/pexels-alena-darmel-7862657.jpg");
+  background-size: cover; 
+  background-attachment: fixed;
+  background-position: center; 
 }
 
 .menu {
@@ -56,10 +60,6 @@ body {
   /* height: 100vh; */
   height: auto;
   padding: 20px; /* Añade espacio de relleno para mejorar la apariencia */
-  background-image: url("https://www.101tv.es/wp-content/uploads/2023/06/pexels-alena-darmel-7862657.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: gray;
 }
 
 #nom {

@@ -1,3 +1,29 @@
 body {
-    background-image: "url(https://images6.alphacoders.com/696/696469.png)";
+    background-image: url("https://images6.alphacoders.com/696/696469.png");
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center; 
+}
+header img {
+    display: flex;
+    width: 5%;
+    margin: 0px;
+  }
+
+main {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.col {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    flex: 0 0 32%;
+    padding: 20px;
+    box-sizing: border-box;
 }
