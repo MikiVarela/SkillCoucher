@@ -2,6 +2,8 @@ package com.example.myshop.controllers;
 
 import jakarta.validation.Valid;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.myshop.domain.Categoria;
 import com.example.myshop.domain.Arma;
+import com.example.myshop.services.ApiService;
 import com.example.myshop.services.ArmaService;
 import com.example.myshop.services.CategoriaService;
 
@@ -22,16 +25,25 @@ public class EldenController {
 
     @Autowired
     public ArmaService armaService;
+    // @Autowired
+    // public ApiService apiService;
     @Autowired
     public CategoriaService categoriaService;
 
     @GetMapping({ "", "/" })
     public String showList(Model model) {
-        model.addAttribute("listaArmas", armaService.obtenerTodos());
+        // model.addAttribute("listaArmas", apiService.getWeapons());
         model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
         model.addAttribute("categoriaSeleccionada", new Categoria(0L, "Todas"));
         return "eldenring/eldenView";
     }
+
+    // @GetMapping("/weapons")
+    // public String getWeapons(Model model) {
+    //     List<Arma> weapons = apiService.getWeapons();
+    //     model.addAttribute("weapons", weapons);
+    //     return "eldenring/weapons";
+    // }
 
     @GetMapping("/new")
     public String showNew(Model model) {
@@ -50,18 +62,6 @@ public class EldenController {
         return "redirect:/armas/";
     }
 
-    @GetMapping("/edit/{id}")
-    public String showEditForm(@PathVariable long id, Model model) {
-        Arma arma = armaService.obtenerPorId(id);
-        if (arma != null) {
-            model.addAttribute("armaForm", arma);
-            model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
-            return "arma/armaEditView";
-        } else {
-            return "redirect:/armas/";
-        }
-    }
-
     @PostMapping("/edit/submit")
     public String showEditSubmit(@Valid Arma armaForm,
             BindingResult bindingResult) {
@@ -74,17 +74,4 @@ public class EldenController {
         }
     }
 
-    @GetMapping("/delete/{id}")
-    public String showDelete(@PathVariable long id) {
-        armaService.delete(id);
-        return "redirect:/armas/";
-    }
-
-    @GetMapping("/porCateg/{idCat}")
-    public String showListInCategory(@PathVariable Long idCat, Model model) {
-        model.addAttribute("listaArmas", armaService.obtenerPorCategoria(idCat));
-        model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
-        model.addAttribute("categoriaSeleccionada", categoriaService.obtenerPorId(idCat));
-        return "arma/armaListView";
-    }
 }

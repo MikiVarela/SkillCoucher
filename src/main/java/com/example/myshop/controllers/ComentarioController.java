@@ -30,13 +30,6 @@ public class ComentarioController {
     @Autowired
     public ComentarioService comentarioService;
 
-    @GetMapping("/arma/{id}")
-    public String showListProductos(@PathVariable Long id, Model model) {
-        model.addAttribute("listaComentario",
-                comentarioService.obtenerTodosPorArma(armaService.obtenerPorId(id)));
-        return "comentario/comentarioListView";
-    }
-
     @GetMapping("/usuario/{id}")
     public String showListUsuarios(@PathVariable Long id, Model model) {
         model.addAttribute("listaComentario",

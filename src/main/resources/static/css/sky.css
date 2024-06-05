@@ -7,23 +7,37 @@ body {
 header img {
     display: flex;
     width: 5%;
+    height: auto;
     margin: 0px;
   }
 
 main {
-    padding: 20px;
-}
-
-.row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-.col {
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    flex: 0 0 32%;
-    padding: 20px;
-    box-sizing: border-box;
+div{
+    width: calc(30% - 20px);
+    padding: 10px; 
+    padding-bottom: 10%;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc; 
+    height: 600px;
+}
+@media screen and (max-width: 900px) {
+    div {
+        width: calc(100% - 20px); 
+        padding-bottom: 25%;
+    }
+    header img {
+        display: flex;
+        width: 50%;
+        height: auto;
+        margin: 0px;
+      }
+}
+iframe{
+    width: 100%;
+    height: 100%;
 }

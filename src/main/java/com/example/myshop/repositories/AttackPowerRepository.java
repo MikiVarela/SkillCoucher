@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.myshop.domain.Categoria;
-import com.example.myshop.domain.Arma;
+import com.example.myshop.domain.AttackPower;
 
-public interface ArmaRepository extends JpaRepository<Arma, String> {
+public interface AttackPowerRepository extends JpaRepository<AttackPower, String> {
 
 
 }

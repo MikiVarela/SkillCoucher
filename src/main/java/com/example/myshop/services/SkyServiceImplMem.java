@@ -6,27 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.myshop.domain.Categoria;
-import com.example.myshop.domain.Arma;
+import com.example.myshop.domain.Sky;
 import com.example.myshop.repositories.CategoriaRepository;
+import com.example.myshop.repositories.SkyRepository;
 import com.example.myshop.repositories.ArmaRepository;
 
 @Service
-public class ArmaServiceImplMem implements ArmaService {
+public class SkyServiceImplMem implements SkyService {
     @Autowired
-    ArmaRepository armaRepository;
+    SkyRepository skyRepository;
     @Autowired
     CategoriaRepository categoriaRepository;
 
-    public Arma añadir(Arma arma) {
-        return armaRepository.save(arma);
+    public Sky añadir(Sky sky) {
+        return skyRepository.save(sky);
     }
 
-    public List<Arma> obtenerTodos() {
-        return armaRepository.findAll();
+    public List<Sky> obtenerTodos() {
+        return skyRepository.findAll();
     }
 
-    public Arma editar(Arma arma) {
-        return armaRepository.save(arma);
+    public Sky editar(Sky sky) {
+        return skyRepository.save(sky);
     }
 
 }

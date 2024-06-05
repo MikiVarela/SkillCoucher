@@ -70,13 +70,13 @@ public class CategoriaController {
         }
     }
 
-    @GetMapping("/delete/{id}")
-    public String showDelete(@PathVariable long id, Model model) {
-        if (armaService.obtenerPorCategoria(id).isEmpty())
-            categoriaService.borrar(id);
-        else
-            model.addAttribute("txterror", "Error, para borrar la categoría, no debe tener productos asociados");
-        model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
-        return "category/categoryListView";
-    }
+    // @GetMapping("/delete/{id}")
+    // public String showDelete(@PathVariable long id, Model model) {
+    //     if (armaService.obtenerPorCategoria(id).isEmpty())
+    //         categoriaService.borrar(id);
+    //     else
+    //         model.addAttribute("txterror", "Error, para borrar la categoría, no debe tener productos asociados");
+    //     model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
+    //     return "category/categoryListView";
+    // }
 }

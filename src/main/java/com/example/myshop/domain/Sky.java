@@ -21,8 +21,7 @@ public class Sky {
     private Long id;
     @NotEmpty
     private String nombre;
-    private String escalado;
-
+    private String urlVideo;
     @ManyToOne
     private Categoria categoria;    
 }

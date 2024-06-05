@@ -15,6 +15,14 @@
       </a>
     </header>
     <main>
+
+      <div>
+        <tr th:each="list : ${listaArmas}">
+          <td th:text="${list.id}">Id</td>
+          <td th:text="${list.name}">nombre</td>
+        </tr>
+      </div>
+
       <!-- Primera sección -->
       <div class="categoria">
         <div class="titulo">

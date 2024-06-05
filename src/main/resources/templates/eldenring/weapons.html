@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weapons List</title>
+</head>
+<body>
+    <h1>Weapons List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="weapon : ${weapons}">
+                <td th:text="${weapon.name}">Weapon Name</td>
+                <td th:text="${weapon.category}">Weapon Category</td>
+                <td><img th:src="${weapon.image}" alt="Weapon Image" /></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

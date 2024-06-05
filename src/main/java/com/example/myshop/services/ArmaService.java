@@ -9,12 +9,8 @@ public interface ArmaService {
 
     List<Arma> obtenerTodos();
 
-    Arma obtenerPorId(Long id);
-
     Arma editar(Arma producto);
 
-    void delete(Long id);
 
-    List<Arma> obtenerPorCategoria(Long idCategoria);
 
 }
