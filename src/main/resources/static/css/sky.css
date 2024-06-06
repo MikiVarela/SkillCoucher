@@ -4,12 +4,24 @@ body {
     background-attachment: fixed;
     background-position: center; 
 }
-header img {
+header{
     display: flex;
-    width: 5%;
+}
+header img {
+    width: 100%;
     height: auto;
     margin: 0px;
-  }
+}
+header a {
+    width: 10%;
+    height: auto;
+}
+
+#titulo{
+    width: 50%;
+    height:auto;
+    margin-left: 12%;
+}
 
 main {
     display: flex;
@@ -21,21 +33,31 @@ div{
     padding: 10px; 
     padding-bottom: 10%;
     margin: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc; 
-    height: 600px;
+    background-color: orange;
+    color: white;
+    border: 1px solid gray; 
+    height: 400px;
 }
 @media screen and (max-width: 900px) {
     div {
         width: calc(100% - 20px); 
         padding-bottom: 25%;
     }
+    header a {
+        width: 15%;
+        height: auto;
+    }
     header img {
         display: flex;
-        width: 50%;
+        width: 100%;
         height: auto;
         margin: 0px;
-      }
+    }
+    #titulo{
+        width: 70%;
+    }
+    
+
 }
 iframe{
     width: 100%;

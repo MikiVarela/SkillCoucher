@@ -37,6 +37,33 @@ public class Main {
 			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
 			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
 			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+
+
 
 	 		// Categoria c2 = categoriaService.añadir(new Categoria(0L, "Espadones"));
 	 		// Arma p1 = new Arma(0L, "Katana2", "Fuerza", c1);

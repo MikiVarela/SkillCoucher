@@ -5,11 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.myshop.domain.Categoria;
 import com.example.myshop.domain.Sky;
 import com.example.myshop.repositories.CategoriaRepository;
 import com.example.myshop.repositories.SkyRepository;
-import com.example.myshop.repositories.ArmaRepository;
 
 @Service
 public class SkyServiceImplMem implements SkyService {
