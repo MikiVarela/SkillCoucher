@@ -49,6 +49,7 @@ public class SecurityConfig {
                                 // para rutas: /css, /js /images
                                 .anyRequest().authenticated())
                                 .formLogin(formLogin -> formLogin
+                                                .loginPage("/login")
                                                 .defaultSuccessUrl("/public", true)
                                                 .permitAll())
                                 .logout(logout -> logout

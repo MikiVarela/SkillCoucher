@@ -1,10 +1,23 @@
+body>a{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 10%;
+  height: auto;
+}
+
+a img{
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("img/fondoBody.jpg");
+  background-image: url("/images/fondoBody.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

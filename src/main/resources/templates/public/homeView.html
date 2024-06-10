@@ -20,10 +20,9 @@
         <li><a th:href="@{/sky/}">No man's sky</a></li>
       </ul>
       <ul class="parte-inferior">
-        <li><a href="logIn.html">Iniciar sesión</a></li>
-        <li><a href="registro.html">Registrate</a></li>
+        <li><a th:href="@{/login}">Iniciar sesión</a></li>
+        <li><a th:href="@{/signup}">Registrate</a></li>
         <li><a href="#">Políticas</a></li>
-        <li><a href="#">Ajustes</a></li>
       </ul>
     </div>
     <div class="contenido">
@@ -32,9 +31,9 @@
       </div>
       <section class="pen">
         <div class="stage">
-          <div class="element michael"></div>
-          <div class="element franklin"><a href="elden.html"></a></div>
-          <div class="element trevor"></div>
+          <div class="element michael"><a id="imgFoto" th:href="@{/over/}"></a></div>
+          <div class="element franklin"><a id="imgFoto" th:href="@{/elden/}"></a></div>
+          <div class="element trevor"><a id="imgFoto" th:href="@{/sky/}"></a></div>
         </div>
       </section>
       <!-- Log Out -->

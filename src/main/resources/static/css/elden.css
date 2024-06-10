@@ -1,6 +1,6 @@
 body {
   background-color: gray;
-  background-image: url("https://www.gameit.es/wp-content/uploads/2021/12/elden-ring.jpg");
+  background-image: url("https://wallpapercave.com/wp/wp13489009.jpg");
   background-size: cover; 
   background-attachment: fixed;
   background-position: center; 
@@ -189,14 +189,23 @@ body {
 }
 
 main {
-  margin-top: 3%;
+  margin-top: 1%;
   margin-left: 3%;
   margin-right: 3%;
 }
 
-header img {
+header {
   display: flex;
-  width: 5%;
+}
+
+header a {
+  width: 11%;
+  height: auto;
+}
+
+header img { 
+  width: 100%;
+  height: auto;
   margin: 0px;
 }
 
@@ -224,5 +233,14 @@ h2 {
 .titulo {
   display: block;
   width: 100%;
+  height: auto;
+}
+
+#fotoTitulo{
+  margin-right: auto;
+  margin-left: auto;
+  position:relative;
+  float: left;
+  width: 40%;
   height: auto;
 }

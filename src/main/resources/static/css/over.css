@@ -4,8 +4,25 @@ body {
     background-attachment: fixed;
     background-position: center; 
 }
-header img {
+header {
     display: flex;
-    width: 5%;
+}
+header a {
+    display: flex;
+    width: 10%;
+    height: auto;
+    margin: 0px;
+}
+header img {
+    width: 100%;
+    height: auto;
     margin: 0px;
   }
+#fotoTitulo{
+    margin-right: auto;
+    margin-left: auto;
+    position:relative;
+    float: left;
+    width: 40%;
+    height: auto;
+}

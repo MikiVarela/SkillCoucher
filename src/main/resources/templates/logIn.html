@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/Logo.png" />
+    <link rel="stylesheet" href="css/logIn.css" type="text/css" />
+    <title>Iniciar Sesión</title>
+  </head>
+  <body>
+    <a th:href="@{/public}" ><img src="images/Logo.png"></a>
+    <div class="login wrap">
+      <div class="h1"><b>Iniciar sesión</b></div>
+      <form th:action="@{/login}" method="post">
+      <input
+        placeholder="Username"
+        id="username"
+        name="username"
+        type="text"
+      />
+      <input
+        placeholder="Password"
+        id="password"
+        name="password"
+        type="password"
+      />
+      <input value="Login" class="btn" type="submit" />
+      <p>Si todavía no tienes cuenta pulse <a id="home"  th:href="@{/signup}">aquí</a></p>
+    </form>
+    </div>
+  </body>
+</html>

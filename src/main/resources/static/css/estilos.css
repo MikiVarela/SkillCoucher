@@ -268,3 +268,9 @@ body {
 .card4:hover .discord {
   fill: white;
 }
+
+#imgFoto{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
