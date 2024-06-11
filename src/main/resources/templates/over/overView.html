@@ -16,7 +16,10 @@
       <img id="fotoTitulo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Overwatch_2_text_logo.svg/2560px-Overwatch_2_text_logo.svg.png">
     </header>
     <main>
-      
-    </main>
+      <div th:each="sky : ${datosOver}">
+        <iframe th:src="${sky.urlVideo}"></iframe>
+        <p th:text="${sky.nombre}">Titulo</p>
+    </div>
+  </main>
   </body>
 </html>

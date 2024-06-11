@@ -4,20 +4,65 @@ body {
     background-attachment: fixed;
     background-position: center; 
 }
-header {
+header{
     display: flex;
-}
-header a {
-    display: flex;
-    width: 10%;
-    height: auto;
-    margin: 0px;
 }
 header img {
     width: 100%;
     height: auto;
     margin: 0px;
-  }
+}
+header a {
+    width: 10%;
+    height: auto;
+}
+
+#titulo{
+    width: 50%;
+    height:auto;
+    margin-left: 12%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div{
+    width: calc(30% - 20px);
+    padding: 10px; 
+    padding-bottom: 10%;
+    margin: 10px;
+    background-color: orange;
+    color: white;
+    border: 1px solid gray; 
+    height: 400px;
+}
+@media screen and (max-width: 900px) {
+    div {
+        width: calc(100% - 20px); 
+        padding-bottom: 25%;
+    }
+    header a {
+        width: 15%;
+        height: auto;
+    }
+    header img {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0px;
+    }
+    #titulo{
+        width: 70%;
+    }
+    
+
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
 #fotoTitulo{
     margin-right: auto;
     margin-left: auto;

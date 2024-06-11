@@ -2,6 +2,8 @@ package com.example.myshop.controllers;
 
 import jakarta.validation.Valid;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,9 +12,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.myshop.domain.Categoria;
+import com.example.myshop.domain.Over;
+import com.example.myshop.repositories.OverRepository;
 import com.example.myshop.domain.Arma;
-import com.example.myshop.services.ArmaService;
+import com.example.myshop.services.OverService;
 import com.example.myshop.services.CategoriaService;
 
 @Controller
@@ -20,15 +23,16 @@ import com.example.myshop.services.CategoriaService;
 public class OverController {
 
     @Autowired
-    public ArmaService armaService;
+    private OverRepository overRepository;
+    @Autowired
+    public OverService overService;
     @Autowired
     public CategoriaService categoriaService;
 
     @GetMapping({ "", "/" })
     public String showList(Model model) {
-        model.addAttribute("listaArmas", armaService.obtenerTodos());
-        model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
-        model.addAttribute("categoriaSeleccionada", new Categoria(0L, "Todas"));
+        List<Over> datos = overRepository.findAll();
+        model.addAttribute("datosOver", datos);
         return "over/overView";
     }
 
@@ -39,25 +43,25 @@ public class OverController {
         return "arma/armaNewView";
     }
 
-    @PostMapping("/new/submit")
-    public String showNewSubmit(
-            @Valid Arma armaForm,
-            BindingResult bindingResult) {
-        if (bindingResult.hasErrors())
-            return "arma/armaNewView";
-        armaService.añadir(armaForm);
-        return "redirect:/armas/";
-    }
+    // @PostMapping("/new/submit")
+    // public String showNewSubmit(
+    //         @Valid Arma armaForm,
+    //         BindingResult bindingResult) {
+    //     if (bindingResult.hasErrors())
+    //         return "arma/armaNewView";
+    //     armaService.añadir(armaForm);
+    //     return "redirect:/armas/";
+    // }
 
-    @PostMapping("/edit/submit")
-    public String showEditSubmit(@Valid Arma armaForm,
-            BindingResult bindingResult) {
+    // @PostMapping("/edit/submit")
+    // public String showEditSubmit(@Valid Arma armaForm,
+    //         BindingResult bindingResult) {
 
-        if (bindingResult.hasErrors()) {
-            return "arma/armaEditView";
-        } else {
-            armaService.editar(armaForm);
-            return "redirect:/armas/";
-        }
-    }
+    //     if (bindingResult.hasErrors()) {
+    //         return "arma/armaEditView";
+    //     } else {
+    //         armaService.editar(armaForm);
+    //         return "redirect:/armas/";
+    //     }
+    // }
 }

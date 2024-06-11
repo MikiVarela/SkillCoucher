@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.example.myshop.domain.Categoria;
 import com.example.myshop.domain.Sky;
+import com.example.myshop.domain.Over;
 // import com.example.myshop.domain.Usuario;
 // import com.example.myshop.domain.Comentario;
 import com.example.myshop.services.CategoriaService;
@@ -17,6 +18,7 @@ import com.example.myshop.services.CategoriaService;
 // import com.example.myshop.services.UsuarioService;
 // import com.example.myshop.services.ComentarioService;
 import com.example.myshop.services.SkyService;
+import com.example.myshop.services.OverService;
 
 @SpringBootApplication
 public class Main {
@@ -28,7 +30,7 @@ public class Main {
 	@Bean
 	CommandLineRunner initData(
 	 		// ArmaService productoService, 
-			CategoriaService categoriaService, SkyService skyService
+			CategoriaService categoriaService, SkyService skyService, OverService overService 
 	 		// ,UsuarioService usuarioService, ComentarioService valoracionService, PasswordEncoder passwordEncoder
 			) {
 	 	return args -> {
@@ -44,7 +46,14 @@ public class Main {
 			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
 			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
 			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
 			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA ","https://www.youtube.com/embed/7uDum2Nqogc", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/watch?v=XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			skyService.añadir(new Sky(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
+			overService.añadir(new Over(0L,"GUÍA EXPEDICIÓN 13","https://www.youtube.com/embed/XJnlXtDD1-Y", c1));
 			
 
 
