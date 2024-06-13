@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-import com.example.myshop.domain.Over;
 import com.example.myshop.domain.Sky;
 import com.example.myshop.repositories.SkyRepository;
 import com.example.myshop.services.SkyService;

@@ -37,8 +37,6 @@ public class SecurityConfig {
                                 .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
                 http.authorizeHttpRequests(auth -> auth
                                 .requestMatchers("/**")
-                                // "user/new/submit"
-                                // ,"/signin","/signout"
                                 .permitAll() // configurarpermisosreales
                                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                                 .requestMatchers("/com/arma/{id}", "/com/usuario/{id}", "/com/new/**", "/user/edit/**")

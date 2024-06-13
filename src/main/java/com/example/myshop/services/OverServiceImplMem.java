@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.myshop.domain.Categoria;
 import com.example.myshop.domain.Over;
 import com.example.myshop.repositories.CategoriaRepository;
 import com.example.myshop.repositories.OverRepository;

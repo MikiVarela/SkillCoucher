@@ -75,21 +75,20 @@ div{
         width: calc(100% - 20px); 
         padding-bottom: 25%;
     }
-    header a {
-        width: 15%;
-        height: auto;
+    header>a {
+        width: 15% !important;
+        height: auto !important;
     }
-    header img {
-        display: flex;
-        width: 100%;
-        height: auto;
-        margin: 0px;
+    header a img {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0px !important;
     }
     #titulo{
         width: 70%;
     }
     #fotoTitulo{
-        width: 60% !important;
+        width: 40% !important;
     }
     
 
