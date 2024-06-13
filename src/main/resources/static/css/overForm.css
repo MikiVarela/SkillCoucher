@@ -1,0 +1,62 @@
+body {
+    background-image: url("https://images3.alphacoders.com/109/1099404.jpg");
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+body>#atras{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 10%;
+    height: auto;
+  }
+#atras img{
+    width: 100%;
+    height: auto;
+}
+
+main{
+    width: 20%;
+    padding-bottom: 57px;
+    padding: 20px;
+    color: orange;
+    background-size: contain;
+    border-radius: 17px;
+    padding-bottom: 50px;
+    font-size: 1.3em;
+    background-color: grey;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+      0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.submit {
+    margin-top: 5%;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 13px;
+    border-radius: 500px;
+    font-weight: 1000;
+    animation: bounce2 1.6s;
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    color: orange;
+    padding: 16px !important;
+  }
+  
+.submit:hover {
+    background: linear-gradient(144deg, #1e1e1e, 20%, #1e1e1e 50%, #1e1e1e);
+    color: orange;
+    padding: 16px !important;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}

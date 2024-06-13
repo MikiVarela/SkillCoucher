@@ -14,14 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.myshop.domain.Categoria;
 import com.example.myshop.services.CategoriaService;
-import com.example.myshop.services.ArmaService;
 
 @Controller
 @RequestMapping("/categorias")
 public class CategoriaController {
 
-    @Autowired
-    public ArmaService armaService;
     @Autowired
     public CategoriaService categoriaService;
 

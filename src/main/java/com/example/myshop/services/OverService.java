@@ -9,6 +9,10 @@ public interface OverService {
 
     List<Over> obtenerTodos();
 
+    Over obtenerPorId(Long id);
+
     Over editar(Over over);
+
+    void borrar(Long id);
 
 }

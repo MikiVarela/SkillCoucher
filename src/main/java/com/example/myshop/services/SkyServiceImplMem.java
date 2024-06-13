@@ -24,8 +24,17 @@ public class SkyServiceImplMem implements SkyService {
         return skyRepository.findAll();
     }
 
+    public Sky obtenerPorId(Long id) {
+        return skyRepository.findById(id).orElse(null);
+    }
+
     public Sky editar(Sky sky) {
         return skyRepository.save(sky);
     }
+
+    public void borrar(Long id) {
+        skyRepository.deleteById(id);
+    }
+
 
 }

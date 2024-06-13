@@ -9,8 +9,10 @@ public interface SkyService {
 
     List<Sky> obtenerTodos();
 
+    Sky obtenerPorId(Long id);
+
     Sky editar(Sky sky);
 
-
+    void borrar(Long id);
 
 }

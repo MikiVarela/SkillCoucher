@@ -7,6 +7,9 @@ body {
 header{
     display: flex;
 }
+p{
+    font-size: large;
+}
 header img {
     width: 100%;
     height: auto;
@@ -23,6 +26,35 @@ header a {
     margin-left: 12%;
 }
 
+a{
+    text-decoration: none;
+}
+
+button {
+    margin-top: 2%;
+    margin-left: 5%;
+    width:15%; 
+    height:50px;
+    border: 2px solid orange;
+    background-color: orange;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+   }
+   
+   button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+   }
+   
+   button:hover {
+    background-color: darkorange;
+   }
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -31,7 +63,7 @@ main {
 div{
     width: calc(30% - 20px);
     padding: 10px; 
-    padding-bottom: 10%;
+    padding-bottom: 7%;
     margin: 10px;
     background-color: orange;
     color: white;
@@ -56,6 +88,11 @@ div{
     #titulo{
         width: 70%;
     }
+    #fotoTitulo{
+        width: 60% !important;
+    }
+    
+
     
 
 }

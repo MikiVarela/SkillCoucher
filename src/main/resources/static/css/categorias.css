@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#logo {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 10%;
+    height: auto;
+}
+
+#logo>img {
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+

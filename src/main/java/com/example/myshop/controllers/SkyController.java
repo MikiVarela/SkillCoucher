@@ -7,14 +7,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
-import com.example.myshop.domain.Arma;
+
+import com.example.myshop.domain.Over;
 import com.example.myshop.domain.Sky;
 import com.example.myshop.repositories.SkyRepository;
-import com.example.myshop.services.ArmaService;
+import com.example.myshop.services.SkyService;
 import com.example.myshop.services.CategoriaService;
 
 @Controller
@@ -24,7 +26,7 @@ public class SkyController {
     @Autowired
     private SkyRepository skyRepository;
     @Autowired
-    public ArmaService armaService;
+    public SkyService skyService;
     @Autowired
     public CategoriaService categoriaService;
 
@@ -37,31 +39,49 @@ public class SkyController {
 
     @GetMapping("/new")
     public String showNew(Model model) {
-        model.addAttribute("armaForm", new Arma());
+        model.addAttribute("skyForm", new Sky());
         model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
-        return "arma/armaNewView";
+        return "sky/skyNewView";
     }
 
     @PostMapping("/new/submit")
     public String showNewSubmit(
-            @Valid Arma armaForm,
+            @Valid Sky skyForm,
             BindingResult bindingResult) {
         if (bindingResult.hasErrors())
-            return "arma/armaNewView";
-        armaService.añadir(armaForm);
-        return "redirect:/armas/";
+            return "sky/skyNewView";
+            skyService.añadir(skyForm);
+        return "redirect:/sky/";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String showEditForm(@PathVariable long id, Model model) {
+        Sky sky = skyService.obtenerPorId(id);
+        if (sky != null) {
+            model.addAttribute("skyForm", sky);
+            model.addAttribute("listaCategorias", categoriaService.obtenerTodos());
+            return "sky/skyEditView";
+        } else {
+            return "redirect:/sky/";
+        }
     }
 
     @PostMapping("/edit/submit")
-    public String showEditSubmit(@Valid Arma armaForm,
+    public String showEditSubmit(@Valid Sky skyForm,
             BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
-            return "arma/armaEditView";
+            return "sky/skyEditView";
         } else {
-            armaService.editar(armaForm);
-            return "redirect:/armas/";
+            skyService.editar(skyForm);
+            return "redirect:/sky/";
         }
+    }
+
+    @GetMapping("/delete/{id}")
+    public String showDelete(@PathVariable long id, Model model) {
+        skyService.borrar(id);
+        return "redirect:/sky/";
     }
 
 }

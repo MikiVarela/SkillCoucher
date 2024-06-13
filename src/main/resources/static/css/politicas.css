@@ -1,0 +1,13 @@
+body{
+    width: 100%;
+}
+a{
+    position: absolute;
+    top: 5px;
+    right: 2%;
+    width: 6%;
+    height: auto;
+}
+img{
+    width: 100%;
+}

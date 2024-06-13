@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/images/Logo.png" />
     <link rel="stylesheet" href="/css/sky.css" type="text/css" />
-    <title>Elden ring</title>
+    <title>No Man's sky</title>
   </head>
 
   <body>
@@ -14,11 +14,21 @@
         <img src="/images/Logo.png" />
       </a>
       <img id="titulo"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/No_Man%E2%80%99s_Sky_%E2%80%93_Text_logo.svg/2560px-No_Man%E2%80%99s_Sky_%E2%80%93_Text_logo.svg.png">
+      <button >
+        <a th:href="@{/over/new}">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg> Create
+        </span>
+      </a>
+      </button>
     </header>
     <main>
       <div th:each="sky : ${datosSky}">
         <iframe th:src="${sky.urlVideo}"></iframe>
         <p th:text="${sky.nombre}">Titulo</p>
+        <p th:text="${sky.categoria.nombre}">Categoria</p>
+        <a sec:authorize="isAuthenticated()" th:href="@{/sky/edit/{id}(id=${sky.id})}">Editar</a>
+        <a sec:authorize="isAuthenticated()" th:href="@{/sky/delete/{id}(id=${sky.id})}">Borrar</a>
     </div>
   </main>
   </body>

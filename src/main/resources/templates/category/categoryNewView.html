@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="~{/fragment.html::cabecera}"></head>
-  <body>
-    <nav th:replace="~{/fragment.html::mainMenu}"></nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/images/Logo.png" />
+  <link rel="stylesheet" href="/css/categorias.css" type="text/css" />
+  <title>Categoria</title>
+</head>
+<script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<body>
+  <a id="logo" th:href="@{/public}"><img src="/images/LogoNegro.png"></a>
+  <main>
     <h1>Nueva Categoría</h1>
-    <form method="post" action="#" th:action="@{/categorias/new/submit}"
-            th:object="${categoriaForm}">
-            <label>Id:<input type="text" id="id" th:field="*{id}" /> </label><br/>
-            <label>Nombre:<input type="text" id="nombre" th:field="*{nombre}" /></label><br/>
-            <input type="submit" value="Enviar" />
+    <form method="post" action="#" th:action="@{/categorias/new/submit}" th:object="${categoriaForm}">
+      <label>Id:<input type="text" id="id" th:field="*{id}" /> </label><br />
+      <label>Nombre:<input type="text" id="nombre" th:field="*{nombre}" /></label><br />
+      <input type="submit" value="Enviar" />
     </form>
-  </body>
+  </main>
+</body>
+
 </html>

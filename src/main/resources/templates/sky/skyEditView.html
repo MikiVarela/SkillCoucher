@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/images/Logo.png" />
+  <link rel="stylesheet" href="/css/skyForm.css" type="text/css" />
+  <title>No Man's sky</title>
+</head>
+
+<body>
+  <a th:href="@{/sky}" id="atras"><img src="https://www.inmotasa.es/wp-content/uploads/2018/03/flechaatras-300x250.png"></a>
+  <main>
+  <h1>Editar sección</h1>
+  <form method="post" action="#" th:action="@{/sky/edit/submit}" th:object="${skyForm}">
+    <label>Id:<input type="text" id="id" th:field="*{id}" /></label><br />
+    <label>Nombre:<input type="text" id="nombre" th:field="*{nombre}" /></label><br />
+    <label>Url Video:<input type="text" id="nombre" th:field="*{urlVideo}" /></label><br>
+    <label>Categoria
+      <select name="categoria" th:field="*{categoria}">
+        <option th:each="cat : ${listaCategorias}" th:value="${cat.id}" th:text="${cat.nombre}"></option>
+      </select> </label><br />
+    <input class="submit" type="submit" value="Enviar" />
+  </form>
+</main>
+</body>
+</html>

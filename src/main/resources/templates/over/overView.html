@@ -14,12 +14,23 @@
         <img src="/images/Logo.png" />
       </a>
       <img id="fotoTitulo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Overwatch_2_text_logo.svg/2560px-Overwatch_2_text_logo.svg.png">
+      <button >
+        <a th:href="@{/over/new}">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg> Create
+        </span>
+      </a>
+      </button>
+  </span>
     </header>
     <main>
-      <div th:each="sky : ${datosOver}">
-        <iframe th:src="${sky.urlVideo}"></iframe>
-        <p th:text="${sky.nombre}">Titulo</p>
-    </div>
+      <div th:each="over : ${datosOver}">
+        <iframe th:src="${over.urlVideo}"></iframe>
+        <p th:text="${over.nombre}">Titulo</p>
+        <p th:text="${over.categoria.nombre}">Categoria</p>
+        <a sec:authorize="isAuthenticated()" th:href="@{/over/edit/{id}(id=${over.id})}">Editar</a>
+        <a sec:authorize="isAuthenticated()" th:href="@{/over/delete/{id}(id=${over.id})}">Borrar</a>
+      </div>
   </main>
   </body>
 </html>
